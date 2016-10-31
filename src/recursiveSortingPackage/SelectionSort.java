@@ -1,16 +1,21 @@
 package recursiveSortingPackage;
+
 public class SelectionSort {
 
-
     public static void selectionSort( int[] list ) {
+        if ( list == null ) {
+            return;
+        }
         int min;
         int temp;
 
         for ( int index = 0; index < list.length - 1; index++ ) {
             min = index;
-            for ( int scan = index + 1; scan < list.length; scan++ )
-                if ( list[ scan ] < list[ min ] )
+            for ( int scan = index + 1; scan < list.length; scan++ ) {
+                if ( list[ scan ] < list[ min ] ) {
                     min = scan;
+                }
+            }
             swap( list, min, index );
         }
     }
@@ -22,6 +27,5 @@ public class SelectionSort {
         list[ min ] = list[ index ];
         list[ index ] = temp;
     }
-
 
 }
