@@ -18,7 +18,7 @@ public class SelectionSortTest {
         assertTrue( res );
     }
 
-    @Test
+    //@Test
     public void testSelectionSortThreeElements() {
         System.out.println( "selectionSort" );
         int[] list = {5, 9, 1};
